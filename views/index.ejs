@@ -1,0 +1,21 @@
+<%- include("partials/header") %>
+
+
+<div class="ui container">
+
+    <h1>Index page</h1>
+    
+<% blogs.forEach(function(blog){ %>
+    <div class="ui segment">
+ <h3><%= blog.title %></h3>
+ <img class="ui image" src="<%= blog.image %>" >
+<%= blog.created.toDateString() %>
+<a class="ui vertical violet button" href="/">Read More</a>
+</div>
+
+
+
+<% }) %>
+
+</div>
+<%- include("partials/footer") %>
