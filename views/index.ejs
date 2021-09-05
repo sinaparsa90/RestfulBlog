@@ -8,9 +8,9 @@
 <% blogs.forEach(function(blog){ %>
     <div class="ui segment">
  <h3><%= blog.title %></h3>
- <img class="ui image" src="<%= blog.image %>" >
+ <img id="index" class="ui image" src="<%= blog.image %>" >
 <%= blog.created.toDateString() %>
-<div class="ui segment"><%= blog.body %></div>
+<div class="ui segment"><%- blog.body %></div>
 
 <a class="ui vertical violet button" href="/blogs/<%= blog._id %>">Read More</a>
 </div>

@@ -1,17 +1,20 @@
 <%- include ("partials/header") %>
 <div class="ui segment container">
 <div class="ui sizer vertical segment">
-    <div class="ui huge header"><%= blog.title %></div>
+    <div id="showImg" class="ui huge header"><%= blog.title %></div>
     <img class="ui centered rounded image" src="<%= blog.image %>" >
     <div class="content">
         <p><%= blog.created.toDateString() %></p>
     </div>
     <div class=" ui segment">
 
-    <p><%= blog.body%></p>
+    <p><%- blog.body%></p>
     </div>
+    
+    <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+    <button class="ui red button" href=" /blogs/<%=blog._id %>">Remove</button>
     <a class="ui blue button" href="/blogs/<%= blog._id %>/edit">Edit</a>
-    <a class="ui red button" href="/">Remove</a>
+    </form>
 </div>
 </div>
 

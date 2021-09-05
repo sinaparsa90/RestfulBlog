@@ -1,17 +1,13 @@
-i.pencil.alternate.icon{ 
-    font-size: 1.5em;
-
+#index {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
 }
 
-.container.main {
-    margin-top: 7.0em;
+#showImg {
+    color: rgb(243, 252, 243);
+  text-shadow: 1px 2px 4px #000000;
 }
-
-#Blog{
-    color: yellowgreen;
-
-}
-
 
 
 
